@@ -29,8 +29,9 @@ export function PriceFilter({
     onMaxChange(value === '' ? Infinity : parseFloat(value))
   }
 
-  const formatPrice = (price: number) => {
-    if (price === Infinity) return ''
+  // Hanya untuk display label di bawah, bukan untuk value input
+  const displayPrice = (price: number) => {
+    if (price === Infinity || price === 0) return null
     return price.toLocaleString('id-ID')
   }
 
@@ -55,7 +56,7 @@ export function PriceFilter({
           <label className="text-xs text-muted-foreground">Min (IDR)</label>
           <Input
             type="number"
-            value={formatPrice(minPrice)}
+            value={minPrice === 0 ? '' : minPrice}
             onChange={(e) => handleMinChange(e.target.value)}
             placeholder="0"
             className="h-9 text-sm"
@@ -67,7 +68,7 @@ export function PriceFilter({
           <label className="text-xs text-muted-foreground">Max (IDR)</label>
           <Input
             type="number"
-            value={formatPrice(maxPrice)}
+            value={maxPrice === Infinity ? '' : maxPrice}
             onChange={(e) => handleMaxChange(e.target.value)}
             placeholder="Tanpa batas"
             className="h-9 text-sm"
@@ -79,7 +80,7 @@ export function PriceFilter({
 
       {isActive && (
         <p className="text-xs text-muted-foreground mt-2 pt-2 border-t border-border">
-          Rp {formatPrice(minPrice) || '0'} — {maxPrice === Infinity ? '∞' : `Rp ${formatPrice(maxPrice)}`}
+          Rp {displayPrice(minPrice) ?? '0'} — {maxPrice === Infinity ? '∞' : `Rp ${displayPrice(maxPrice)}`}
         </p>
       )}
     </Card>

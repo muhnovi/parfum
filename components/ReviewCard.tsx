@@ -99,13 +99,9 @@ export function ReviewCard({ review }: ReviewCardProps) {
           </div>
 
           {/* View button — full width, compact */}
-          <Link
-            href={`/review/${review.id}`}
-            className="flex items-center justify-center gap-1 w-full py-2 rounded-md border border-border text-xs font-medium text-foreground hover:bg-muted transition-colors mt-1"
-            onClick={(e) => e.stopPropagation()}
-          >
+          <div className="flex items-center justify-center gap-1 w-full py-2 rounded-md border border-border text-xs font-medium text-foreground hover:bg-muted transition-colors mt-1">
             Lihat Detail <ChevronRight className="w-3.5 h-3.5" />
-          </Link>
+          </div>
         </div>
       </Card>
     </Link>
