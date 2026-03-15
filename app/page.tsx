@@ -18,7 +18,7 @@ function HomeContent() {
                 Info Parfum
               </h1>
               <p className="text-lg text-muted-foreground max-w-2xl">
-                Temukan dan bagikan ulasan autentik tentang parfum terbaik di dunia. Unggah foto, tulis deskripsi rinci, dan beri peringkat parfum favorit Anda.
+                Temukan dan bagikan ulasan autentik tentang parfum terbaik. Unggah foto, tulis deskripsi rinci, dan beri peringkat parfum favorit Anda.
               </p>
             </div>
             <Button

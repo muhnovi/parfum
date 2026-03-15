@@ -124,7 +124,7 @@ export function ReviewsGrid() {
       )}
 
       {/* Type Filter Pills — horizontally scrollable on mobile */}
-      <div className="flex gap-2 overflow-x-auto pb-1 scrollbar-none -mx-4 px-4 sm:mx-0 sm:px-0 sm:flex-wrap">
+      <div className="flex gap-2 overflow-x-auto pb-3 mb-1 border-b border-border scrollbar-none -mx-4 px-4 sm:mx-0 sm:px-0 sm:flex-wrap">
         {filterOptions.map((option) => (
           <button
             key={option.value}

@@ -264,7 +264,7 @@ export function ReviewForm({ onSuccess, isModal = false }: ReviewFormProps) {
               Mempublish...
             </span>
           ) : (
-            'Publish Review 🌸'
+            'Publish Review'
           )}
         </Button>
       </form>
